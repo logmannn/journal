@@ -2,14 +2,23 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <title>Ping Pong</title>
+    <title>Journal</title>
   </head>
   <body>
-    <form id="ping-pong-form">
-      <label for="goal">Enter a number you fool:</label>
-      <input id="goal" type="number">
+    <form id="journal-form">
+      <label for="title">Enter a title for your form:</label>
+      <input id="title" type="text"><br>
+      <label for="description">Enter a description for your form:</label>
+      <input id="description" type="text"><br>
       <button type="submit">Submit</button>
     </form>
+
+    <div class="countWords">
+
+    </div>
+
     <ul id="solution"></ul>
+    <ul id="vowelCount"></ul>
+    <ul id="numOfCons"></ul>
   </body>
 </html>

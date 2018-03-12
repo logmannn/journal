@@ -1,13 +1,20 @@
 import './styles.css';
-import { pingPong } from './ping-pong';
+import { journal } from './journal';
+import { vowelCount } from './journal';
+import { consonantCount } from './journal';
 
 $(document).ready(function() {
-  $('#ping-pong-form').submit(function(event) {
+  $('#journal-form').submit(function(event) {
     event.preventDefault();
-    var goal = $('#goal').val();
-    var output = pingPong(goal);
-    output.forEach(function(element) {
-      $('#solution').append("<li>" + element + "</li>");
-    });
+    // var title = $('#title').val();
+    var description = $('#description').val();
+    var output = journal(description);
+    var vowels = vowelCount(description);
+    var consonants = consonantCount(description);
+    // output.forEach(function(element) {
+    $('#solution').append("<li>Word count: " + output + "</li>");
+    $('#vowelCount').append("<li>Vowel count: " + vowels + "</li>");
+    $('#numOfCons').append("<li>Consonant count: " + consonants + "</li>");
+    // });
   });
 });

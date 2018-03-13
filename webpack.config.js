@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// const Bootstrap = require('bootstrap');
 
 module.exports = {
   entry: './src/main.js',
@@ -26,15 +27,15 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader"
+          exclude: [
+            /node_modules/,
+            /spec/
+          ],
+          loader: "eslint-loader"
       }
     ]
   }

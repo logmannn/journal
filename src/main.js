@@ -1,5 +1,7 @@
-import './styles.css';
 import { journal, vowelCount, consonantCount, getTeaser} from './journal';
+import $ from 'jquery';
+import 'bootstrap';
+import './styles.css';
 
 $(document).ready(function() {
   $('#journal-form').submit(function(event) {

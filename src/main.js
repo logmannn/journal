@@ -1,4 +1,5 @@
 import { journal, vowelCount, consonantCount, getTeaser} from './journal';
+
 import $ from 'jquery';
 import 'bootstrap';
 import './styles.css';

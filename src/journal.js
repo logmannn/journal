@@ -4,26 +4,25 @@
 //   return output;
 // }
 
-function journal(description) {
-  this.description = description;
-  var inputs = this.description.split(" ");
+export function journal(description) {
+  var inputs = description.split(" ");
   var output = parseInt(inputs.length);
   return output;
 }
 
-function vowelCount(description) {
+export function vowelCount(description) {
   var inputs = description.match(/[aeiou]/g);
   var numOfVowels = parseInt(inputs.length);
   return numOfVowels;
 }
 
-function consonantCount(description) {
+export function consonantCount(description) {
   var inputs = description.match(/[bcdfghjklmnpqrstvwxyz]/g);
   var numOfCons = parseInt(inputs.length);
   return numOfCons;
 }
 
-function getTeaser(description) {
+export function getTeaser(description) {
   // grab everything till the end of the sentence
   var arr = description.match(/(.*?)[.?!]/g);
   var firstEightWords = arr[0].split(/\s+/).slice(0,8).join(" ");
@@ -35,7 +34,7 @@ function getTeaser(description) {
 
 
 
-exports.journalModule = journal;
-exports.vowelModule = vowelCount;
-exports.consonantModule = consonantCount;
-exports.teaserModule = getTeaser;
+// exports.journalModule = journal;
+// exports.vowelModule = vowelCount;
+// exports.consonantModule = consonantCount;
+// exports.teaserModule = getTeaser;
